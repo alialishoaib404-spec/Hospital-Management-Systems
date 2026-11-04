@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartCare Hospital Management System</title>
+    <meta name="description" content="Hospital Management System dashboard and operational modules" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/public.css" />
+  </head>
+  <body>
+    <div id="publicApp">
+      <header class="public-navbar">
+        <a class="public-brand" href="#home" data-public-view="home" aria-label="SmartCare home">
+          <span class="public-brand-mark">S</span>
+          <span><strong>SmartCare</strong><small>Hospital System</small></span>
+        </a>
+        <button class="public-menu-toggle" id="publicMenuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="public-nav-links" id="publicNavLinks" aria-label="Public navigation">
+          <a href="#home" data-public-view="home">Home</a>
+          <a href="#services" data-scroll-target="services">Services</a>
+          <a href="#about" data-scroll-target="about">About</a>
+          <button type="button" class="public-nav-login" data-public-view="login">Log in</button>
+          <button type="button" class="public-nav-signup" data-public-view="register">Create account</button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="public-view landing-view active" id="home-view">
+          <div class="hero-section" id="home">
+            <div class="hero-copy">
+              <span class="eyebrow"><span class="eyebrow-dot"></span> CARE, CONNECTED</span>
+              <h1>Better care starts with <span>better coordination.</span></h1>
+              <p>One calm, connected workspace for your hospital team. Keep patient care, appointments, beds, and operations moving together.</p>
+              <div class="hero-actions">
+                <button type="button" class="hero-primary" data-public-view="register">Get started <span aria-hidden="true">→</span></button>
+                <button type="button" class="hero-secondary" data-public-view="login"><span class="play-icon">▶</span> Explore the dashboard</button>
+              </div>
+              <div class="hero-proof"><div class="avatar-stack"><span>AM</span><span>JL</span><span>SK</span></div><p><strong>Made for care teams</strong><br />A clearer view of every day</p></div>
+            </div>
+            <div class="hero-visual" aria-label="SmartCare hospital operations dashboard preview">
+              <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+              <div class="care-card">
+                <div class="care-card-top"><div><span class="card-kicker">TUESDAY, 04 NOV</span><h2>Good morning, team</h2></div><span class="live-pill"><i></i> Live overview</span></div>
+                <div class="care-metrics">
+                  <div class="care-metric"><span>Patients today</span><strong>128</strong><small>↑ 12% this week</small></div>
+                  <div class="care-metric"><span>Available beds</span><strong>24</strong><small>Across 4 wards</small></div>
+                </div>
+                <div class="care-appointments">
+                  <div class="appointment-heading"><strong>Care team</strong><span>View schedule →</span></div>
+                  <div class="care-person"><span class="person-avatar mint">AJ</span><span><strong>Dr. Alice Johnson</strong><small>Internal Medicine · 09:30</small></span><b>●</b></div>
+                  <div class="care-person"><span class="person-avatar sand">CL</span><span><strong>Dr. Claire Martin</strong><small>Cardiology · 10:15</small></span><b>●</b></div>
+                </div>
+                <div class="floating-note"><span class="note-icon">✓</span><span><strong>All in sync</strong><small>Updates saved instantly</small></span></div>
+              </div>
+              <div class="hero-decoration decor-cross">+</div><div class="hero-decoration decor-dot">✳</div>
+            </div>
+          </div>
+
+          <section class="trust-strip" aria-label="Platform highlights">
+            <span>BUILT FOR BETTER HOSPITAL OPERATIONS</span>
+            <div><b>✳ Patient-first</b><b>⌁ Connected workflows</b><b>◷ Real-time overview</b></div>
+          </section>
+
+          <section class="public-features" id="services">
+            <div class="public-section-heading"><span class="eyebrow">ONE WORKSPACE, MORE CLARITY</span><h2>Everything your team needs to stay in sync.</h2><p>Bring everyday hospital operations into one simple, approachable workspace.</p></div>
+            <div class="feature-grid">
+              <article class="feature-card"><span class="feature-icon icon-green">♡</span><h3>Patient care</h3><p>Keep patient records organized and make essential details easier for your team to find.</p></article>
+              <article class="feature-card"><span class="feature-icon icon-peach">◷</span><h3>Appointments & OPD</h3><p>Coordinate schedules and queues with a shared view of the day ahead.</p></article>
+              <article class="feature-card"><span class="feature-icon icon-blue">⌂</span><h3>Beds & admissions</h3><p>See bed availability and follow admissions from one clear operational view.</p></article>
+              <article class="feature-card"><span class="feature-icon icon-yellow">▤</span><h3>Hospital operations</h3><p>Connect pharmacy, billing, laboratory, staff, and reporting workflows.</p></article>
+            </div>
+          </section>
+
+          <section class="public-about" id="about">
+            <div class="about-mark">✚</div><div><span class="eyebrow">A LITTLE MORE HUMAN</span><h2>Less time chasing details.<br /><span>More time for people.</span></h2></div>
+            <p>SmartCare brings your day-to-day operations together, helping teams spend less effort switching between tasks and more attention where it matters.</p>
+            <button type="button" class="about-link" data-public-view="register">See how SmartCare works <span>→</span></button>
+          </section>
+          <footer class="public-footer"><a class="public-brand" href="#home" data-public-view="home"><span class="public-brand-mark">S</span><span><strong>SmartCare</strong><small>Hospital System</small></span></a><span>Care flows better when teams do.</span><span>© 2026 SmartCare by Shoaib Akhtar & Taksham.</span></footer>
+        </section>
+
+        <section class="public-view auth-view" id="login-view" aria-labelledby="loginTitle">
+          <div class="auth-aside"><a href="#home" class="auth-back" data-public-view="home">← Back to home</a><div class="auth-aside-content"><span class="eyebrow">WELCOME BACK</span><h1>Your team’s day,<br /><span>all in one place.</span></h1><p>Sign in to pick up where your care team left off.</p><div class="auth-quote"><span>“</span><p>A clearer picture of our hospital means a more connected team.</p><small>— The SmartCare team</small></div></div><span class="auth-aside-foot">SmartCare · Care, connected.</span></div>
+          <div class="auth-main"><div class="auth-form-wrap"><div class="auth-mobile-brand"><span class="public-brand-mark">S</span><strong>SmartCare</strong></div><span class="eyebrow">YOUR WORKSPACE IS READY</span><h2 id="loginTitle">Welcome back</h2><p class="auth-intro">Sign in to your SmartCare account.</p>
+            <form id="loginForm" class="auth-form">
+              <label for="loginEmail">Email address</label><input id="loginEmail" name="email" type="email" placeholder="you@hospital.com" autocomplete="username" required />
+              <div class="password-label"><label for="loginPassword">Password</label><a href="#" id="forgotPasswordLink">Forgot password?</a></div>
+              <div class="password-input"><input id="loginPassword" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required minlength="6" /><button type="button" class="password-toggle" data-toggle-password="loginPassword" aria-label="Show password">Show</button></div>
+              <p class="auth-error" id="loginError" role="alert"></p>
+              <button type="submit" class="auth-submit">Sign in <span>→</span></button>
+            </form>
+            <div class="auth-divider"><span>or try the demo</span></div><button type="button" id="demoLoginButton" class="demo-login">Continue as demo admin</button>
+            <p class="auth-switch">New to SmartCare? <button type="button" data-public-view="register">Create an account</button></p>
+            <p class="demo-disclaimer">Demo only: accounts are stored in this browser. This is not a secure production login.</p>
+          </div></div>
+        </section>
+
+        <section class="public-view auth-view" id="register-view" aria-labelledby="registerTitle">
+          <div class="auth-aside register-aside"><a href="#home" class="auth-back" data-public-view="home">← Back to home</a><div class="auth-aside-content"><span class="eyebrow">A BETTER WAY TO WORK TOGETHER</span><h1>Make room for<br /><span>better care.</span></h1><p>Bring your hospital workflows into a single, thoughtful workspace.</p><div class="register-benefits"><span>✓ Organized patient records</span><span>✓ Connected daily workflows</span><span>✓ Clear operational insights</span></div></div><span class="auth-aside-foot">SmartCare · Care, connected.</span></div>
+          <div class="auth-main"><div class="auth-form-wrap"><div class="auth-mobile-brand"><span class="public-brand-mark">S</span><strong>SmartCare</strong></div><span class="eyebrow">GET STARTED WITH SMARTCARE</span><h2 id="registerTitle">Create your account</h2><p class="auth-intro">Set up a demo account for your hospital workspace.</p>
+            <form id="registerForm" class="auth-form">
+              <label for="registerName">Full name</label><input id="registerName" name="name" type="text" placeholder="Your name" autocomplete="name" required minlength="2" />
+              <label for="registerHospital">Hospital / organization</label><input id="registerHospital" name="hospital" type="text" placeholder="Your hospital name" required minlength="2" />
+              <label for="registerEmail">Work email</label><input id="registerEmail" name="email" type="email" placeholder="you@hospital.com" autocomplete="email" required />
+              <label for="registerPassword">Create password</label><div class="password-input"><input id="registerPassword" name="password" type="password" placeholder="At least 6 characters" autocomplete="new-password" required minlength="6" /><button type="button" class="password-toggle" data-toggle-password="registerPassword" aria-label="Show password">Show</button></div>
+              <label class="terms-check"><input type="checkbox" name="terms" required /><span>I agree to the demo experience terms and understand this is not a secure production service.</span></label>
+              <p class="auth-error" id="registerError" role="alert"></p>
+              <button type="submit" class="auth-submit">Create demo account <span>→</span></button>
+            </form>
+            <p class="auth-switch">Already have an account? <button type="button" data-public-view="login">Log in</button></p>
+            <p class="demo-disclaimer">Demo only: registration is saved in this browser. No data is sent to a server.</p>
+          </div></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="app-shell hidden" id="adminApp">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">S</div>
+          <div class="brand-text">
+            <span class="brand-name">SMARTCARE</span>
+            <small>Hospital System</small>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Main navigation">
+          <button class="nav-link active" data-section="dashboard"><span>Dashboard</span></button>
+          <button class="nav-link" data-section="patients"><span>Patients</span></button>
+          <button class="nav-link" data-section="doctors"><span>Doctors</span></button>
+          <button class="nav-link" data-section="appointments"><span>Appointments</span></button>
+          <button class="nav-link" data-section="opd"><span>OPD Management</span></button>
+          <button class="nav-link" data-section="ipd"><span>IPD Management</span></button>
+          <button class="nav-link" data-section="beds"><span>Bed Management</span></button>
+          <button class="nav-link" data-section="admissions"><span>Admissions</span></button>
+          <button class="nav-link" data-section="pharmacy"><span>Pharmacy</span></button>
+          <button class="nav-link" data-section="inventory"><span>Medicine Inventory</span></button>
+          <button class="nav-link" data-section="billing"><span>Billing & Payments</span></button>
+          <button class="nav-link" data-section="laboratory"><span>Laboratory</span></button>
+          <button class="nav-link" data-section="staff"><span>Staff Management</span></button>
+          <button class="nav-link" data-section="reports"><span>Reports & Analytics</span></button>
+          <button class="nav-link" data-section="settings"><span>Settings</span></button>
+          <button class="nav-link danger" id="logoutButton"><span>Logout</span></button>
+        </nav>
+      </aside>
+
+      <div class="main-panel">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+            <div class="header-breadcrumb"><span>SmartCare</span><span class="divider">/</span><span>Operations</span></div>
+          </div>
+
+          <div class="topbar-center">
+            <label class="global-search" aria-label="Global search">
+              <span>⌕</span>
+              <input id="globalSearchInput" type="search" placeholder="Search patient, doctor, medicine..." />
+            </label>
+          </div>
+
+          <div class="topbar-right">
+            <button class="icon-button" id="notificationButton" aria-label="Notifications">
+              🔔
+              <span class="badge" id="notificationBadge">3</span>
+            </button>
+            <div class="date-time">
+              <strong id="currentDate">--</strong>
+              <span id="currentTime">--:-- --</span>
+            </div>
+            <div class="user-menu">
+              <div class="user-avatar">AS</div>
+              <div class="user-meta">
+                <strong>Admin</strong>
+                <small>Hospital Admin</small>
+              </div>
+              <button class="profile-toggle" aria-label="Open profile menu">▾</button>
+            </div>
+          </div>
+        </header>
+
+        <main class="content-area">
+          <section class="page-section active" id="dashboard-section">
+            <div class="section-head">
+              <div>
+                <h1>Hospital Dashboard</h1>
+                <p>Operational overview and live insights.</p>
+              </div>
+              <button class="primary-btn" id="dashboardRefreshBtn">Refresh Data</button>
+            </div>
+            <div class="stat-grid" id="dashboardStats"></div>
+            <div class="dashboard-grid">
+              <div class="panel span-2">
+                <div class="panel-head"><h3>Monthly Revenue</h3><span class="chip success">+12.5%</span></div>
+                <div class="chart-bars" id="revenueChart"></div>
+              </div>
+              <div class="panel">
+                <div class="panel-head"><h3>Patient Registration</h3></div>
+                <div class="chart-bars compact" id="patientChart"></div>
+              </div>
+              <div class="panel span-2">
+                <div class="panel-head"><h3>Recent Patient Registrations</h3></div>
+                <ul class="list-stack" id="recentPatientsList"></ul>
+              </div>
+              <div class="panel">
+                <div class="panel-head"><h3>Upcoming Appointments</h3></div>
+                <ul class="list-stack" id="upcomingAppointmentsList"></ul>
+              </div>
+              <div class="panel">
+                <div class="panel-head"><h3>Doctor Availability</h3></div>
+                <ul class="list-stack" id="doctorAvailabilityList"></ul>
+              </div>
+              <div class="panel">
+                <div class="panel-head"><h3>Recent Activities</h3></div>
+                <ul class="timeline" id="activityTimeline"></ul>
+              </div>
+              <div class="panel">
+                <div class="panel-head"><h3>Notifications</h3></div>
+                <ul class="list-stack" id="notificationsList"></ul>
+              </div>
+              <div class="panel">
+                <div class="panel-head"><h3>Bed Occupancy</h3></div>
+                <div class="mini-bars" id="bedOccupancyChart"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-section" id="patients-section">
+            <div class="section-head"><div><h2>Patient Management</h2><p>Track patient status, department allocation, and medical records.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3 id="patientFormTitle">Add Patient</h3></div>
+                <form id="patientForm" class="stack-form">
+                  <input type="hidden" name="id" id="patientIdField" />
+                  <div class="form-grid">
+                    <label>Full Name<input name="fullName" required /></label>
+                    <label>Age<input name="age" type="number" min="0" required /></label>
+                    <label>Gender<select name="gender"><option>Male</option><option>Female</option><option>Other</option></select></label>
+                    <label>Phone<input name="phone" required /></label>
+                    <label>Email<input name="email" type="email" /></label>
+                    <label>Blood Group<select name="bloodGroup"><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+                    <label>Department<select name="department"><option>General Medicine</option><option>Cardiology</option><option>Neurology</option><option>Orthopedics</option><option>Dermatology</option><option>Pediatrics</option></select></label>
+                    <label>Assigned Doctor<select name="assignedDoctor"></select></label>
+                    <label>Status<select name="status"><option>Active</option><option>Critical</option><option>Recovered</option><option>Emergency</option></select></label>
+                    <label class="span-2">Address<textarea name="address" rows="3"></textarea></label>
+                    <label>Emergency Contact<input name="emergencyContact" /></label>
+                    <label>Registration Date<input name="registrationDate" type="date" /></label>
+                  </div>
+                  <div class="form-actions">
+                    <button type="submit" class="primary-btn">Save Patient</button>
+                    <button type="button" class="secondary-btn" id="cancelPatientEdit">Cancel</button>
+                  </div>
+                </form>
+              </div>
+              <div class="panel table-panel">
+                <div class="panel-head controls-row">
+                  <h3>Patient Records</h3>
+                  <div class="inline-controls">
+                    <input id="patientSearch" type="search" placeholder="Search patient" />
+                    <select id="patientDepartmentFilter"><option value="">All departments</option></select>
+                  </div>
+                </div>
+                <div class="table-wrap">
+                  <table>
+                    <thead><tr><th>ID</th><th>Name</th><th>Department</th><th>Doctor</th><th>Status</th><th>Actions</th></tr></thead>
+                    <tbody id="patientTableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-section" id="doctors-section">
+            <div class="section-head"><div><h2>Doctor Management</h2><p>Maintain physician schedules and availability.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3 id="doctorFormTitle">Add Doctor</h3></div>
+                <form id="doctorForm" class="stack-form">
+                  <input type="hidden" name="id" id="doctorIdField" />
+                  <div class="form-grid">
+                    <label>Full Name<input name="fullName" required /></label>
+                    <label>Specialization<input name="specialization" required /></label>
+                    <label>Department<select name="department"><option>General Medicine</option><option>Cardiology</option><option>Neurology</option><option>Orthopedics</option><option>Dermatology</option><option>Pediatrics</option></select></label>
+                    <label>Phone<input name="phone" required /></label>
+                    <label>Email<input name="email" type="email" /></label>
+                    <label>Experience<input name="experience" type="number" min="0" /></label>
+                    <label>Consultation Fee<input name="fee" type="number" min="0" step="0.01" /></label>
+                    <label>Available Days<input name="availableDays" /></label>
+                    <label>Available Time<input name="availableTime" /></label>
+                    <label>Status<select name="status"><option>Available</option><option>On Leave</option><option>Busy</option></select></label>
+                  </div>
+                  <div class="form-actions"><button type="submit" class="primary-btn">Save Doctor</button><button type="button" class="secondary-btn" id="cancelDoctorEdit">Cancel</button></div>
+                </form>
+              </div>
+              <div class="panel table-panel">
+                <div class="panel-head controls-row"><h3>Doctor Directory</h3><input id="doctorSearch" type="search" placeholder="Search doctor" /></div>
+                <div class="table-wrap">
+                  <table>
+                    <thead><tr><th>ID</th><th>Name</th><th>Department</th><th>Status</th><th>Fee</th><th>Actions</th></tr></thead>
+                    <tbody id="doctorTableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-section" id="appointments-section">
+            <div class="section-head"><div><h2>Appointment Management</h2><p>Book, confirm, and reschedule visits.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3 id="appointmentFormTitle">Book Appointment</h3></div>
+                <form id="appointmentForm" class="stack-form">
+                  <input type="hidden" name="id" id="appointmentIdField" />
+                  <div class="form-grid">
+                    <label>Patient<select name="patientId" id="appointmentPatientSelect" required></select></label>
+                    <label>Doctor<select name="doctorId" id="appointmentDoctorSelect" required></select></label>
+                    <label>Department<select name="department"><option>General Medicine</option><option>Cardiology</option><option>Neurology</option><option>Orthopedics</option><option>Dermatology</option><option>Pediatrics</option></select></label>
+                    <label>Date<input name="date" type="date" required /></label>
+                    <label>Time<select name="time"><option>09:00 AM</option><option>09:30 AM</option><option>10:00 AM</option><option>10:30 AM</option><option>11:00 AM</option><option>11:30 AM</option><option>12:00 PM</option><option>01:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option></select></label>
+                    <label>Status<select name="status"><option>Scheduled</option><option>Confirmed</option><option>Completed</option><option>Cancelled</option><option>No-show</option></select></label>
+                  </div>
+                  <div class="form-actions"><button type="submit" class="primary-btn">Save Appointment</button><button type="button" class="secondary-btn" id="cancelAppointmentEdit">Cancel</button></div>
+                </form>
+              </div>
+              <div class="panel table-panel">
+                <div class="panel-head controls-row">
+                  <h3>Appointment List</h3>
+                  <div class="inline-controls">
+                    <input id="appointmentDateFilter" type="date" />
+                    <select id="appointmentStatusFilter"><option value="">All statuses</option><option>Scheduled</option><option>Confirmed</option><option>Completed</option><option>Cancelled</option><option>No-show</option></select>
+                  </div>
+                </div>
+                <div class="table-wrap">
+                  <table>
+                    <thead><tr><th>Patient</th><th>Doctor</th><th>Date</th><th>Time</th><th>Status</th><th>Actions</th></tr></thead>
+                    <tbody id="appointmentTableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-section" id="opd-section">
+            <div class="section-head"><div><h2>OPD Management</h2><p>Queue tracking and consultation status.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3>Add OPD Queue</h3></div>
+                <form id="opdForm" class="stack-form">
+                  <div class="form-grid">
+                    <label>Patient<select name="patientId" id="opdPatientSelect" required></select></label>
+                    <label>Doctor<select name="doctorId" id="opdDoctorSelect" required></select></label>
+                    <label>Department<select name="department"><option>General Medicine</option><option>Cardiology</option><option>Neurology</option><option>Orthopedics</option><option>Dermatology</option><option>Pediatrics</option></select></label>
+                    <label>Status<select name="status"><option>Waiting</option><option>In Consultation</option><option>Completed</option><option>Referred</option></select></label>
+                  </div>
+                  <div class="form-actions"><button type="submit" class="primary-btn">Add to Queue</button></div>
+                </form>
+              </div>
+              <div class="panel table-panel">
+                <div class="panel-head"><h3>OPD Queue</h3></div>
+                <div class="table-wrap"><table><thead><tr><th>Token</th><th>Patient</th><th>Doctor</th><th>Dept</th><th>Arrival</th><th>Status</th></tr></thead><tbody id="opdTableBody"></tbody></table></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-section" id="ipd-section">
+            <div class="section-head"><div><h2>IPD Management</h2><p>Monitor inpatient admission, diagnosis, and discharge.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3>Admit Patient</h3></div>
+                <form id="ipdForm" class="stack-form">
+                  <div class="form-grid">
+                    <label>Patient<select name="patientId" id="ipdPatientSelect" required></select></label>
+                    <label>Doctor<select name="doctorId" id="ipdDoctorSelect" required></select></label>
+                    <label>Ward<select name="ward"><option>General Ward</option><option>ICU</option><option>Private Ward</option><option>Emergency</option></select></label>
+                    <label>Bed<select name="bedId" id="ipdBedSelect" required></select></label>
+                    <label>Admission Date<input name="admissionDate" type="date" required /></label>
+                    <label>Status<select name="status"><option>Admitted</option><option>Monitoring</option><option>Discharged</option></select></label>
+                    <label class="span-2">Diagnosis<textarea name="diagnosis" rows="3"></textarea></label>
+                  </div>
+                  <div class="form-actions"><button type="submit" class="primary-btn">Admit Patient</button></div>
+                </form>
+              </div>
+              <div class="panel table-panel">
+                <div class="panel-head"><h3>Admission History</h3></div>
+                <div class="table-wrap"><table><thead><tr><th>Patient</th><th>Ward</th><th>Bed</th><th>Doctor</th><th>Status</th><th>Actions</th></tr></thead><tbody id="ipdTableBody"></tbody></table></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-section" id="beds-section">
+            <div class="section-head"><div><h2>Bed Management</h2><p>Track bed availability and allocation rules.</p></div></div>
+            <div class="stat-grid compact-grid" id="bedStats"></div>
+            <div class="panel"><div class="panel-head"><h3>Ward-wise Bed Status</h3></div><div class="bed-grid" id="bedGrid"></div></div>
+          </section>
+
+          <section class="page-section" id="admissions-section">
+            <div class="section-head"><div><h2>Admissions</h2><p>Admission overview and billing summary.</p></div></div>
+            <div class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>Patient</th><th>Diagnosis</th><th>Ward</th><th>Doctor</th><th>Admission Date</th><th>Status</th></tr></thead><tbody id="admissionOverviewBody"></tbody></table></div></div>
+          </section>
+
+          <section class="page-section" id="pharmacy-section">
+            <div class="section-head"><div><h2>Pharmacy & Inventory</h2><p>Manage medicines, stock, expiry, and supplier records.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3 id="medicineFormTitle">Add Medicine</h3></div>
+                <form id="medicineForm" class="stack-form">
+                  <input type="hidden" name="id" id="medicineIdField" />
+                  <div class="form-grid">
+                    <label>Medicine Name<input name="name" required /></label>
+                    <label>Category<input name="category" required /></label>
+                    <label>Manufacturer<input name="manufacturer" /></label>
+                    <label>Batch Number<input name="batchNumber" /></label>
+                    <label>Quantity<input name="quantity" type="number" min="0" required /></label>
+                    <label>Unit Price<input name="unitPrice" type="number" min="0" step="0.01" required /></label>
+                    <label>Expiry Date<input name="expiryDate" type="date" /></label>
+                    <label>Supplier<input name="supplier" /></label>
+                    <label>Stock Status<select name="stockStatus"><option>In Stock</option><option>Low Stock</option><option>Out of Stock</option><option>Expired</option></select></label>
+                  </div>
+                  <div class="form-actions"><button type="submit" class="primary-btn">Save Medicine</button><button type="button" class="secondary-btn" id="cancelMedicineEdit">Cancel</button></div>
+                </form>
+              </div>
+              <div class="panel table-panel">
+                <div class="panel-head controls-row"><h3>Medicine Inventory</h3><input id="medicineSearch" type="search" placeholder="Search medicine" /></div>
+                <div class="table-wrap"><table><thead><tr><th>Name</th><th>Category</th><th>Qty</th><th>Price</th><th>Status</th><th>Actions</th></tr></thead><tbody id="medicineTableBody"></tbody></table></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-section" id="inventory-section">
+            <div class="section-head"><div><h2>Medicine Inventory</h2><p>Monitor stock alerts and supplier activity.</p></div></div>
+            <div class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>Medicine</th><th>Category</th><th>Available</th><th>Expiry</th><th>Status</th></tr></thead><tbody id="inventoryOverviewBody"></tbody></table></div></div>
+          </section>
+
+          <section class="page-section" id="billing-section">
+            <div class="section-head"><div><h2>Billing & Payments</h2><p>Generate and track invoices for patient services.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3>Create Invoice</h3></div>
+                <form id="billingForm" class="stack-form">
+                  <div class="form-grid">
+                    <label>Patient<select name="patientId" id="billingPatientSelect" required></select></label>
+                    <label>Consultation<input name="consultationCharge" type="number" min="0" step="0.01" value="0" /></label>
+                    <label>Admission<input name="admissionCharge" type="number" min="0" step="0.01" value="0" /></label>
+                    <label>Bed<input name="bedCharge" type="number" min="0" step="0.01" value="0" /></label>
+                    <label>Laboratory<input name="labCharge" type="number" min="0" step="0.01" value="0" /></label>
+                    <label>Pharmacy<input name="pharmacyCharge" type="number" min="0" step="0.01" value="0" /></label>
+                    <label>Additional Services<input name="extraCharge" type="number" min="0" step="0.01" value="0" /></label>
+                    <label>Discount<input name="discount" type="number" min="0" step="0.01" value="0" /></label>
+                    <label>Status<select name="status"><option>Pending</option><option>Partially Paid</option><option>Paid</option></select></label>
+                  </div>
+                  <div class="form-actions"><button type="submit" class="primary-btn">Generate Invoice</button></div>
+                </form>
+              </div>
+              <div class="panel table-panel"><div class="panel-head"><h3>Invoices</h3></div><div class="table-wrap"><table><thead><tr><th>Invoice</th><th>Patient</th><th>Total</th><th>Status</th><th>Actions</th></tr></thead><tbody id="invoiceTableBody"></tbody></table></div></div>
+            </div>
+          </section>
+
+          <section class="page-section" id="laboratory-section">
+            <div class="section-head"><div><h2>Laboratory</h2><p>Manage test requests and specimen tracking.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3>Create Lab Request</h3></div>
+                <form id="labForm" class="stack-form">
+                  <div class="form-grid">
+                    <label>Patient<select name="patientId" id="labPatientSelect" required></select></label>
+                    <label>Test<select name="testName"><option>CBC</option><option>Blood Glucose</option><option>Lipid Profile</option><option>Thyroid Profile</option><option>Urine Test</option></select></label>
+                    <label>Category<select name="category"><option>Hematology</option><option>Biochemistry</option><option>Urinalysis</option><option>Endocrinology</option></select></label>
+                    <label>Status<select name="status"><option>Requested</option><option>Sample Collected</option><option>Processing</option><option>Completed</option></select></label>
+                    <label class="span-2">Result<textarea name="result" rows="3" placeholder="Enter sample result (demonstration only)"></textarea></label>
+                  </div>
+                  <div class="form-actions"><button type="submit" class="primary-btn">Save Lab Request</button></div>
+                </form>
+              </div>
+              <div class="panel table-panel"><div class="panel-head"><h3>Lab History</h3></div><div class="table-wrap"><table><thead><tr><th>Patient</th><th>Test</th><th>Category</th><th>Status</th><th>Result</th></tr></thead><tbody id="labTableBody"></tbody></table></div></div>
+            </div>
+          </section>
+
+          <section class="page-section" id="staff-section">
+            <div class="section-head"><div><h2>Staff Management</h2><p>Track departments, roles, and staffing.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3 id="staffFormTitle">Add Staff</h3></div>
+                <form id="staffForm" class="stack-form">
+                  <input type="hidden" name="id" id="staffIdField" />
+                  <div class="form-grid">
+                    <label>Full Name<input name="fullName" required /></label>
+                    <label>Role<input name="role" required /></label>
+                    <label>Department<select name="department"><option>Administration</option><option>Nursing</option><option>Pharmacy</option><option>Laboratory</option><option>Support</option><option>IT</option></select></label>
+                    <label>Phone<input name="phone" /></label>
+                    <label>Email<input name="email" type="email" /></label>
+                    <label>Status<select name="status"><option>Active</option><option>On Leave</option><option>Inactive</option></select></label>
+                  </div>
+                  <div class="form-actions"><button type="submit" class="primary-btn">Save Staff</button><button type="button" class="secondary-btn" id="cancelStaffEdit">Cancel</button></div>
+                </form>
+              </div>
+              <div class="panel table-panel">
+                <div class="panel-head controls-row"><h3>Staff Directory</h3><input id="staffSearch" type="search" placeholder="Search staff" /></div>
+                <div class="table-wrap"><table><thead><tr><th>Name</th><th>Role</th><th>Department</th><th>Status</th><th>Actions</th></tr></thead><tbody id="staffTableBody"></tbody></table></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-section" id="reports-section">
+            <div class="section-head"><div><h2>Reports & Analytics</h2><p>Performance insights across the hospital.</p></div></div>
+            <div class="stat-grid compact-grid" id="reportStats"></div>
+            <div class="panel">
+              <div class="panel-head controls-row">
+                <h3>Operational Summary</h3>
+                <div class="inline-controls">
+                  <input id="reportDateFrom" type="date" />
+                  <input id="reportDateTo" type="date" />
+                  <button class="secondary-btn" id="generateReportBtn">Generate</button>
+                </div>
+              </div>
+              <div class="table-wrap"><table><thead><tr><th>Category</th><th>Metric</th><th>Current</th><th>Trend</th></tr></thead><tbody id="reportsTableBody"></tbody></table></div>
+            </div>
+          </section>
+
+          <section class="page-section" id="settings-section">
+            <div class="section-head"><div><h2>Settings</h2><p>Hospital preferences and reset controls.</p></div></div>
+            <div class="module-grid two-col">
+              <div class="panel form-panel">
+                <div class="panel-head"><h3>Hospital Configuration</h3></div>
+                <form id="settingsForm" class="stack-form">
+                  <div class="form-grid">
+                    <label>Hospital Name<input name="hospitalName" value="SmartCare Hospital" /></label>
+                    <label>Currency<select name="currency"><option>USD</option><option>EUR</option><option>INR</option></select></label>
+                    <label>Timezone<input name="timezone" value="UTC+05:30" /></label>
+                  </div>
+                  <div class="form-actions"><button type="submit" class="primary-btn">Save Settings</button></div>
+                </form>
+              </div>
+              <div class="panel form-panel danger-panel">
+                <div class="panel-head"><h3>Demo Data</h3></div>
+                <p>Reset all records to the default demo dataset.</p>
+                <button class="danger-btn" id="resetDataButton">Reset Demo Data</button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
+    <div class="modal" id="confirmModal" aria-hidden="true">
+      <div class="modal-card">
+        <h3 id="confirmModalTitle">Confirm Action</h3>
+        <p id="confirmModalText">Are you sure?</p>
+        <div class="form-actions modal-actions">
+          <button type="button" class="secondary-btn" id="confirmModalCancel">Cancel</button>
+          <button type="button" class="danger-btn" id="confirmModalConfirm">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/storage.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+    <script src="js/patients.js" defer></script>
+    <script src="js/doctors.js" defer></script>
+    <script src="js/appointments.js" defer></script>
+    <script src="js/opd.js" defer></script>
+    <script src="js/ipd.js" defer></script>
+    <script src="js/beds.js" defer></script>
+    <script src="js/pharmacy.js" defer></script>
+    <script src="js/billing.js" defer></script>
+    <script src="js/laboratory.js" defer></script>
+    <script src="js/staff.js" defer></script>
+    <script src="js/reports.js" defer></script>
+    <script src="js/settings.js" defer></script>
+    <script src="js/auth.js" defer></script>
+  </body>
+</html>

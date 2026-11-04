@@ -1,0 +1,52 @@
+.hidden {
+    display: none !important;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.meta-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(83, 107, 87, 0.08);
+    border-radius: 999px;
+    padding: 0.3rem 0.55rem;
+    color: var(--heading);
+    font-weight: 700;
+    font-size: 0.68rem;
+}
+
+.severity-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.severity-dot.high {
+    background: var(--danger);
+}
+
+.severity-dot.medium {
+    background: var(--warning);
+}
+
+.severity-dot.low {
+    background: var(--success);
+}
+
+.gap-sm {
+    gap: 0.5rem;
+}
